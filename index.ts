@@ -22,10 +22,10 @@ let pid: string | number = 22;
 
 //Enum
 enum Director1 {
-  Up,
-  Down,
-  Left,
-  Right,
+  Up = 'Up',
+  Down = 'Down',
+  Left = 'Left',
+  Right = 'Rigth',
 }
 
 //Object

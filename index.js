@@ -19,11 +19,12 @@ let pid = 22;
 //Enum
 var Director1;
 (function (Director1) {
-    Director1[Director1["Up"] = 0] = "Up";
-    Director1[Director1["Down"] = 1] = "Down";
-    Director1[Director1["Left"] = 2] = "Left";
-    Director1[Director1["Right"] = 3] = "Right";
+    Director1["Up"] = "Up";
+    Director1["Down"] = "Down";
+    Director1["Left"] = "Left";
+    Director1["Right"] = "Rigth";
 })(Director1 || (Director1 = {}));
+console.log(Director1['Up']);
 const user = {
     id: 1,
     name: 'HwanMin',
@@ -59,6 +60,7 @@ class Person {
 }
 const HwanMin = new Person(1, 'HwanMin');
 // console.log(HwanMin.id);
+//SubClasses
 class Employee extends Person {
     constructor(id, name, position) {
         super(id, name);
@@ -67,3 +69,9 @@ class Employee extends Person {
 }
 const Hww = new Employee(5, 'KIM', 'Employee');
 console.log(Hww.register());
+//Generics
+function getArray(item) {
+    return new Array().concat(item);
+}
+let numArray = getArray([1, 2, 3, 4]);
+let strArray = getArray(['1', '2', '2424', '2424']);
